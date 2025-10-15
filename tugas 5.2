@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int berat;
+    int tarif;
+
+    printf("Masukkan berat barang (dalam kg): ");
+    scanf("%d", &berat);
+
+    if (berat <= 1) {
+        tarif = 10000;
+    } 
+    else if (berat <= 5) {
+        tarif = 25000;
+    } else if (berat <= 10) {
+        tarif = 50000;
+    } else if (berat > 50) { 
+        tarif = 50000 + (berat - 10) * 5000;
+    } else {
+        printf("Error!");
+    }
+
+    printf("Tarif yang dikenakan sebesar Rp.%d\n", tarif);
+    return 0;
+}
