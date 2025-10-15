@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int nilai;
+    float penghasilan;
+    
+
+    printf("masukkan nilai akademik mahasiswa: ");
+    scanf("%d", &nilai);
+
+    printf("masukkan penghasilan orang tua: ");
+    scanf("%f", &penghasilan);
+
+    if (nilai > 100) {
+        printf("Error! nilai tidak boleh melebihi 100");
+        return 0;
+    } else if (nilai > 85 && penghasilan < 500000) {
+        printf("anda berhak menerima beasiswa penuh");
+    } else if (nilai > 70 && penghasilan < 8000000) {
+        printf("anda berhak menerima beasiswa parsial");
+    } else {
+        printf("anda tidak mendapatkan beasiswa");
+    }
+return 0;
+}
